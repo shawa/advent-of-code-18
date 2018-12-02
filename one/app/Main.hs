@@ -12,7 +12,7 @@ parseNumbers :: [String] -> [Int]
 parseNumbers = Either.rights . map (parse int [])
 
 partOne :: [Int] -> Int
-partOne = foldl (+) 0
+partOne = sum
 
 partTwo :: [Int] ->  Int
 partTwo = Maybe.fromJust . firstRepeating . scanl (+) 0 . cycle
